@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { CiTrophy } from "react-icons/ci";
 import { GrGraphQl } from "react-icons/gr";
 import { PiCodeThin, PiFireExtinguisherThin } from "react-icons/pi";
-import COLORS from "~/colors";
 import ProjectShowcaseRow from "../ProjectShowcaseRow";
 import SectionTitle from "../SectionTitle";
 
@@ -28,7 +27,7 @@ export default function ProjectsSection({
                     <ProjectShowcaseRow
                         title="Wildfire prediction"
                         subtitle="Predicting wildfire outbreaks in South Africa"
-                        icon={<PiFireExtinguisherThin color={COLORS.fontGray} size={50} />}
+                        icon={<PiFireExtinguisherThin size={50} className="text-fontGray" />}
                         content1={<p className="text-fontGray mt-2 text-sm">
                             Wildfires are a huge problem in South Africa.
                             At Deloitte I had the opportunity to work on the  {" "}
@@ -45,7 +44,7 @@ export default function ProjectsSection({
                     <ProjectShowcaseRow
                         title="Arbitrage on the Ethereum blockchain"
                         subtitle="Automatically trading cryptocurrencies for a profit"
-                        icon={<GrGraphQl color={COLORS.fontGray} size={50} />}
+                        icon={<GrGraphQl size={50} className="text-fontGray" />}
                         content2={<p className="text-fontGray mt-2 text-sm">
                             During 2022, <a
                                 className="font-bold underline"
@@ -60,7 +59,7 @@ export default function ProjectsSection({
                     <ProjectShowcaseRow
                         title="Euro 2024 prediction"
                         subtitle="Predicting betting odds for the Euro 2024 in Germany"
-                        icon={<CiTrophy color={COLORS.fontGray} size={50} />}
+                        icon={<CiTrophy size={50} className="text-fontGray" />}
                         content1={<p className="text-fontGray mt-2 text-sm">
                             In my free time I like to work on projects that interest me. One of those projects was predicting the betting odds for the Euro 2024 in Germany.
                             I used Python, statistical models and a simple machine learning model to predict odds for each team.
@@ -70,16 +69,14 @@ export default function ProjectsSection({
                     <ProjectShowcaseRow
                         title="My Portfolio"
                         subtitle="Making a personal website that is way over the top"
-                        icon={<PiCodeThin color={COLORS.fontGray} size={50} />}
+                        icon={<PiCodeThin size={50} className="text-fontGray" />}
                         content2={<p className="text-fontGray mt-2 text-sm">
-                            This website. That&apos;s right, the website you are currently on! I built it in a weekend to flex on my friends. 
-                            The mission? Go totally overboard with everything. Did I pull it off? You tell me.
-                            In any case, you can look at the source code <a
+                            This website. That&apos;s right, the website you are currently on! You can look at the source code <a
                                 className="font-bold underline"
                                 href="https://github.com/jhKessler/portfolio"
                                 target="_blank">
                                 here
-                            </a>.
+                            </a>. The mission? Go totally overboard with everything. Did I pull it off? You tell me.
                         </p>}
                     />
                 </div>

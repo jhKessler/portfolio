@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { Events, scrollSpy } from "react-scroll";
 import { Section } from "~/enums/Section";
 import NavbarLink from "./NavbarLink";
-import COLORS from "~/colors";
 
 export default function StickyNavbar({
     appearAfterSeconds
@@ -66,9 +65,7 @@ export default function StickyNavbar({
         className="flex justify-center sticky top-3 z-50"
         transition={{ duration: 0.5, delay: appearAfterSeconds }}>
         <nav
-          className={`relative inline-flex items-center border text-fontGray rounded-3xl p-1 backdrop-blur-md backdrop-filter bg-black/50`} style={{
-            borderColor: isSticky ? COLORS.primary : COLORS.darkGray,
-          }}>
+          className={`relative inline-flex items-center border text-fontGray rounded-3xl p-1 backdrop-blur-md backdrop-filter bg-black/50 ${isSticky? "border-primary" : "border-darkGray"}`}>
           <NavbarLink
             onClick={handleClickDecorator(Section.ABOUT)}
             onSetActive={handleSetActiveDecorator(Section.ABOUT)}
