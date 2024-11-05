@@ -72,8 +72,14 @@ export default function ProjectsSection({
                         subtitle="Making a personal website that is way over the top"
                         icon={<PiCodeThin color={COLORS.fontGray} size={50} />}
                         content2={<p className="text-fontGray mt-2 text-sm">
-                            This website. That&apos;s right, the website you are currently on! I built it in a weekend to flex on my friends.
-                            The mission? Go totally overboard with everything. Did I pull it off?
+                            This website. That&apos;s right, the website you are currently on! I built it in a weekend to flex on my friends. 
+                            The mission? Go totally overboard with everything. Did I pull it off? You tell me.
+                            In any case, you can look at the source code <a
+                                className="font-bold underline"
+                                href="https://github.com/jhKessler/portfolio"
+                                target="_blank">
+                                here
+                            </a>.
                         </p>}
                     />
                 </div>
