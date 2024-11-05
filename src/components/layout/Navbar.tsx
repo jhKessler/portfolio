@@ -9,7 +9,7 @@ export default function StickyNavbar({
   }: {
     appearAfterSeconds: number;
   }) {
-    const [currentSelection, setCurrentSection] = useState<Section>(Section.HERO);
+    const [currentSelection, setCurrentSection] = useState<Section>(Section.ABOUT);
     const [isSticky, setIsSticky] = useState(false);
     const isCurrentlyScrolling = useRef(false);
     const navbarRef = useRef<HTMLDivElement>(null);
