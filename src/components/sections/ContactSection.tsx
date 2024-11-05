@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import GithubIcon from "../../components/icons/Github";
 import LinkedInIcon from "../../components/icons/LinkedIn";
 import SectionTitle from "../SectionTitle";
+
 
 export default function ContactSection({
     appearAfterSeconds
@@ -18,6 +20,14 @@ export default function ContactSection({
                 // only delay 1 because the div is only mounted after the intro animation is done
                 transition={{ duration: 0.5, delay: appearAfterSeconds }}>
                 <SectionTitle sectionNumber={3} sectionTitle="Contact me" />
+                <Image
+                        src="/portrait2.jpg"
+                        alt="Johnny Kessler in front of blue sky"
+                        width={200}
+                        height={200}
+                        className="rounded-full"
+                        draggable={false}
+                    />
                 <span className="text-fontGray text-center text-lg max-w-2xl">
                     Thanks for visiting my personal website! Wanna reach out to me? Here are some ways to do so.
                 </span>
