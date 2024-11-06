@@ -25,7 +25,7 @@ export default function ContactSection({
                         alt="Johnny Kessler in front of blue sky"
                         width={200}
                         height={200}
-                        className="rounded-full"
+                        className="rounded-2xl"
                         draggable={false}
                     />
                 <span className="text-fontGray text-center text-lg max-w-2xl">

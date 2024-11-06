@@ -6,7 +6,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Johnny Kessler",
-  description: "Welcome to my personal website! I'm Johnny, a professional developer from Hamburg, Germnany. I like building stuff with software.",
+  description: "Welcome to my personal website! I'm Johnny Kessler, a professional developer from Hamburg, Germnany. I like building stuff with software.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
