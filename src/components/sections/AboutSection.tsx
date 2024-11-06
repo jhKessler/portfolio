@@ -29,7 +29,7 @@ export default function AboutSection({
                         frontend, backend, or DevOps.
                     </span>
                     <Image
-                        src="/portrait.jpg"
+                        src="/images/portrait.jpg"
                         alt="Johnny Kessler at the Solutions Conference"
                         width={200}
                         height={200}
