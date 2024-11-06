@@ -17,7 +17,7 @@ export default function ImJohnny({
             transition={{ duration: 0.5, delay: fadeInAfterSeconds }}
         >
             <Image
-                src="/avatar.jpg"
+                src="/images/avatar.jpg"
                 alt="Johnny Kessler Avatar"
                 width={25}
                 height={25}

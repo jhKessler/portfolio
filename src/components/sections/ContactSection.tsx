@@ -21,13 +21,13 @@ export default function ContactSection({
                 transition={{ duration: 0.5, delay: appearAfterSeconds }}>
                 <SectionTitle sectionNumber={3} sectionTitle="Contact me" />
                 <Image
-                        src="/portrait2.jpg"
-                        alt="Johnny Kessler in front of blue sky"
-                        width={200}
-                        height={200}
-                        className="rounded-2xl"
-                        draggable={false}
-                    />
+                    src="/images/portrait2.jpg"
+                    alt="Johnny Kessler in front of blue sky"
+                    width={200}
+                    height={200}
+                    className="rounded-2xl"
+                    draggable={false}
+                />
                 <span className="text-fontGray text-center text-lg max-w-2xl">
                     Thanks for visiting my personal website! Wanna reach out to me? Here are some ways to do so.
                 </span>

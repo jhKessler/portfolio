@@ -42,21 +42,21 @@ export default function AboutSection({
                     <div className="flex flex-col md:flex-row w-full justify-center items-center gap-x-6 gap-y-6">
                         <AboutMeCard
                             title="TechLabs Hamburg Mentor"
-                            imagePath="/techlabs.png"
+                            imagePath="/images/techlabs.png"
                             content="Mentoring students in programming and data science at TechLabs Hamburg as a volunteer."
                             url="https://www.techlabs.org/location/hamburg"
                             appearAfterSeconds={0}
                         />
                         <AboutMeCard
                             title="ARIC Brown Bag Award Winner"
-                            imagePath="/aric.png"
+                            imagePath="/images/aric.png"
                             content="Youngest recipient of the ARIC Brown Bag Award."
                             url="https://www.linkedin.com/posts/johnny-kessler_artificialintelligence-inecht-ai-activity-6983321886587768832-JyHg"
                             appearAfterSeconds={0.35}
                         />
                         <AboutMeCard
                             title="Published Co-Author"
-                            imagePath="/haufe.png"
+                            imagePath="/images/haufe.png"
                             content="Co-author of industry book about AI and its impact on our lives."
                             url="https://www.amazon.de/K%C3%BCnstliche-Intelligenz-unser-Leben-pr%C3%A4gt/dp/3648162047"
                             appearAfterSeconds={0.7}
