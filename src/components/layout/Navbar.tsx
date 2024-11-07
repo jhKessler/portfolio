@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Events, scrollSpy } from "react-scroll";
 import { Section } from "~/enums/Section";
 import NavbarLink from "./NavbarLink";
+import { Link as SectionLink } from 'react-scroll';
 
 export default function StickyNavbar({
     appearAfterSeconds
@@ -87,6 +88,13 @@ export default function StickyNavbar({
             text='Contact'
             isSelected={currentSelection === Section.CONTACT}
           />
+          <SectionLink
+            to={Section.HERO}
+            className='hidden'
+            offset={-75}
+            spy={true}
+            onSetActive={handleSetActiveDecorator(Section.HERO)}
+        />
         </nav>
       </motion.div>
     )

@@ -18,7 +18,9 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col items-center min-h-dvh pt-48 gap-y-12 max-w-6xl w-screen">
-      <HeroSection perElementDelay={PER_ELEMENT_DELAY} words={WORDS} animationDoneAfterSeconds={INTRO_ANIMATION_DONE_AFTER} />
+      <Element name={Section.HERO}>
+        <HeroSection perElementDelay={PER_ELEMENT_DELAY} words={WORDS} animationDoneAfterSeconds={INTRO_ANIMATION_DONE_AFTER} />
+      </Element>
       <StickyNavbar
         appearAfterSeconds={INTRO_ANIMATION_DONE_AFTER}
       />
