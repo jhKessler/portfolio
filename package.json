@@ -22,6 +22,7 @@
     "@t3-oss/env-nextjs": "^0.10.1",
     "framer-motion": "^11.11.11",
     "next": "^15.0.1",
+    "nxtblog-ai": "^1.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",

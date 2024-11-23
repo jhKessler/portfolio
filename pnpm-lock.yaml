@@ -26,6 +26,9 @@ importers:
       next:
         specifier: ^15.0.1
         version: 15.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      nxtblog-ai:
+        specifier: ^1.0.0
+        version: 1.0.0(react-dom@18.3.1(react@18.3.1))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -687,6 +690,10 @@ packages:
   color@4.2.3:
     resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==}
     engines: {node: '>=12.5.0'}
+
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
 
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
@@ -1372,6 +1379,10 @@ packages:
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
+
+  nxtblog-ai@1.0.0:
+    resolution: {integrity: sha512-2b0+ioHEZYr/PhGhTuh2jfMugEyZxDCrELJx2dXmMtivxxFHrueUJwWUEOn73s1yFhk0C9PKr5cPP8xhXuBtqQ==}
+    hasBin: true
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -2563,6 +2574,8 @@ snapshots:
       color-string: 1.9.1
     optional: true
 
+  commander@12.1.0: {}
+
   commander@4.1.1: {}
 
   concat-map@0.0.1: {}
@@ -3386,6 +3399,20 @@ snapshots:
       - babel-plugin-macros
 
   normalize-path@3.0.0: {}
+
+  nxtblog-ai@1.0.0(react-dom@18.3.1(react@18.3.1)):
+    dependencies:
+      commander: 12.1.0
+      next: 15.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@opentelemetry/api'
+      - '@playwright/test'
+      - babel-plugin-macros
+      - babel-plugin-react-compiler
+      - react-dom
+      - sass
 
   object-assign@4.1.1: {}
 

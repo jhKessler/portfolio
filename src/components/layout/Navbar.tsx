@@ -67,13 +67,13 @@ export default function StickyNavbar({
         transition={{ duration: 0.5, delay: appearAfterSeconds }}>
         <nav
           className={`relative inline-flex items-center border text-fontGray rounded-3xl p-1 backdrop-blur-md backdrop-filter bg-black/50 ${isSticky? "border-primary" : "border-darkGray"}`}>
-          <NavbarLink
+         <NavbarLink
             onClick={handleClickDecorator(Section.ABOUT)}
             onSetActive={handleSetActiveDecorator(Section.ABOUT)}
             to={Section.ABOUT}
             text='About'
             isSelected={currentSelection === Section.ABOUT}
-          />
+          /> 
           <NavbarLink
             onClick={handleClickDecorator(Section.PROJECTS)}
             onSetActive={handleSetActiveDecorator(Section.PROJECTS)}
