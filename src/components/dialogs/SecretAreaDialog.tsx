@@ -3,9 +3,10 @@
 import React, { useState } from "react";
 import NestedDialog from "./NestedDialog";
 
-export default function SecretAreaDialog({ open, onClose }: {
+export default function SecretAreaDialog({ open, onClose, setAlreadyRickrolled }: {
     open: boolean;
     onClose: () => void;
+    setAlreadyRickrolled: (value: boolean) => void;
 }) {
     const [showSecretAreaConfirmation1, setShowSecretAreaConfirmation1] = useState(false);
     const [showSecretAreaConfirmation2, setShowSecretAreaConfirmation2] = useState(false);
@@ -38,9 +39,11 @@ export default function SecretAreaDialog({ open, onClose }: {
                             confirmText="Yes"
                             cancelText="No, go back"
                             onConfirm={() => {
-                                window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
                                 setShowSecretAreaConfirmation2(false);
                                 setShowSecretAreaConfirmation1(false);
+                                setAlreadyRickrolled(true);
+                                localStorage.setItem('alreadyRickrolled', 'true');
+                                window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
                                 onClose();
                             }}
                             onClose={() => setShowSecretAreaConfirmation2(false)}
