@@ -16,11 +16,11 @@ export default function GithubIcon({
                 delay: appearAfterSeconds,
             }}
             viewport={{ once: true, amount: 0.5 }}
-            className="bg-darkGray p-3 rounded-xl"
+            className="bg-darkGray p-3 rounded-xl group"
             href="https://github.com/jhKessler"
             target="_blank"
         >
-            <FaGithub color="white" size={32} className="transform transition-transform duration-200 hover:scale-125" />
+            <FaGithub color="white" size={32} className="transform transition-transform duration-200 group-hover:scale-125" />
         </motion.a>
     )
 }

@@ -17,14 +17,14 @@ export default function LinkedInIcon({
                 delay: appearAfterSeconds,
             }}
             viewport={{ once: true, amount: 0.5 }}
-            className="bg-darkGray p-3 rounded-xl"
+            className="bg-darkGray p-3 rounded-xl group"
             href="https://www.linkedin.com/in/johnny-kessler"
             target="_blank"
         >
             <FaLinkedin
                 color="white"
                 size={32}
-                className="transform transition-transform duration-200 hover:scale-125"
+                className="transform transition-transform duration-200 group-hover:scale-125"
             />
         </motion.a>
     )
