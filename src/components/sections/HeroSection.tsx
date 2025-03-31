@@ -24,7 +24,8 @@ const TECHSTACK = [
   "Postgres",
   "Cloudflare",
   "FastAPI",
-  "TypeScript"
+  "TypeScript",
+  "Kubernetes"
 ];
 
 
