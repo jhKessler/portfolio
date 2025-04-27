@@ -36,7 +36,7 @@ export default function AboutMeCard({
                 </div>
                 <span className="text-fontGray text-md font-bold text-center transition-colors duration-300 hover:text-white">{title}</span>
             </a>
-            <span className="text-fontGray text-sm md:text-xs">{content}</span>
+            <span className="text-fontGray text-sm md:text-xs text-center">{content}</span>
         </motion.div>
     )
 }

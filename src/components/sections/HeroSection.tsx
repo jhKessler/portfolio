@@ -25,7 +25,8 @@ const TECHSTACK = [
   "Cloudflare",
   "FastAPI",
   "TypeScript",
-  "Kubernetes"
+  "Kubernetes",
+  "Clickhouse"
 ];
 
 
