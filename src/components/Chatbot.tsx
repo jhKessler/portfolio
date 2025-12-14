@@ -55,19 +55,20 @@ export default function Chatbot() {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
-          'x-chat-password': process.env.NEXT_PUBLIC_CHAT_PASSWORD || '',
+          'x-chat-password': process.env.NEXT_PUBLIC_CHAT_PASSWORD ?? '',
         },
         body: JSON.stringify({
           messages: [...messages, userMessage],
         }),
       });
 
-      const data = await response.json();
+      const data = (await response.json()) as { choices?: { message: { content: string } }[] };
+      const choice = data.choices?.[0];
 
-      if (data.choices && data.choices[0]) {
+      if (choice) {
         const botMessage: Message = {
           role: 'assistant',
-          content: data.choices[0].message.content,
+          content: choice.message.content,
         };
         setMessages((prev) => [...prev, botMessage]);
       } else {
@@ -150,8 +151,8 @@ export default function Chatbot() {
                   <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                     {messages.length === 0 && (
                       <div className="text-center text-gray-400 text-sm mt-8">
-                        <p>👋 Hi! I'm Pepe.</p>
-                        <p>Ask me about Johnny's projects, skills, or experience.</p>
+                        <p>👋 Hi! I&apos;m Pepe.</p>
+                        <p>Ask me about Johnny&apos;s projects, skills, or experience.</p>
                       </div>
                     )}
                     {messages.map((msg, idx) => (

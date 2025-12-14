@@ -7,7 +7,7 @@ const openai = new OpenAI({
 
 export async function POST(req: Request) {
   try {
-    const { messages } = await req.json();
+    const { messages } = (await req.json()) as { messages: OpenAI.Chat.ChatCompletionMessageParam[] };
     const password = req.headers.get('x-chat-password');
 
     if (password !== process.env.NEXT_PUBLIC_CHAT_PASSWORD) {
@@ -138,7 +138,7 @@ These are the ONLY links you should provide, output them as a markdown link so t
 "`;
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-5-nano',
+      model: 'gpt-3.5-turbo',
       messages: [
         { role: 'system', content: systemPrompt },
         ...messages
