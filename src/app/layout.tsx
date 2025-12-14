@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { type Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { PostHogProvider } from "../components/PostHogProvider";
+import Chatbot from "../components/Chatbot";
 
 export const metadata: Metadata = {
   title: "Johnny Kessler",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className="bg-black flex items-center justify-center pb-12 px-12 max-w-screen">
         <PostHogProvider>
           {children}
+          <Chatbot />
         </PostHogProvider>
       </body>
     </html>
