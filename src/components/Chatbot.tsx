@@ -41,6 +41,25 @@ export default function Chatbot() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isLoading]);
 
+  // Prevent body scroll when chat is open on mobile
+  useEffect(() => {
+    const handleResize = () => {
+      if (isOpen && window.innerWidth < 640) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const handleSendMessage = async (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!input.trim() || isLoading) return;
@@ -106,7 +125,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="mb-4 w-[350px] h-[500px] bg-gray-900 border border-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="mb-4 w-[calc(100vw-3rem)] sm:w-[350px] h-[70vh] sm:h-[500px] bg-gray-900 border border-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-primary p-4 flex items-center justify-between shrink-0">
@@ -148,7 +167,7 @@ export default function Chatbot() {
               ) : (
                 <>
                   {/* Messages */}
-                  <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                  <div className="flex-1 overflow-y-auto overscroll-y-contain p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                     {messages.length === 0 && (
                       <div className="text-center text-gray-400 text-sm mt-8">
                         <p>👋 Hi! I&apos;m Pepe.</p>
@@ -233,7 +252,7 @@ export default function Chatbot() {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="Type your question..."
-                        className="w-full bg-gray-800 text-white rounded-full pl-4 pr-12 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 placeholder:text-gray-500"
+                        className="w-full bg-gray-800 text-white rounded-full pl-4 pr-12 py-3 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 placeholder:text-gray-500"
                       />
                       <button
                         type="submit"
