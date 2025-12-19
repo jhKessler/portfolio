@@ -12,29 +12,12 @@ interface Message {
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(false);
   const [hasConsent, setHasConsent] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Show tooltip after 5 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!isOpen) {
-        setShowTooltip(true);
-      }
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [isOpen]);
-
-  // Hide tooltip when chat is opened
-  useEffect(() => {
-    if (isOpen) {
-      setShowTooltip(false);
-    }
-  }, [isOpen]);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -102,22 +85,6 @@ export default function Chatbot() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
-      <AnimatePresence>
-        {showTooltip && !isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.9 }}
-            className="mb-4 mr-2 bg-white text-black px-4 py-2 rounded-xl shadow-lg relative cursor-pointer"
-            onClick={() => setIsOpen(true)}
-          >
-            <div className="font-medium text-sm">Got questions?</div>
-            {/* Triangle pointer */}
-            <div className="absolute -bottom-2 right-4 w-4 h-4 bg-white transform rotate-45"></div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
